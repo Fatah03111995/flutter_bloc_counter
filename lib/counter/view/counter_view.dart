@@ -19,6 +19,7 @@ class CounterView extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           FloatingActionButton(
+            key: const Key('counterView_increment_fab'),
             onPressed: () {
               context.read<CounterCubit>().increment();
             },
@@ -26,6 +27,7 @@ class CounterView extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           FloatingActionButton(
+            key: const Key('counterView_decrement_fab'),
             onPressed: () {
               context.read<CounterCubit>().decrement();
             },
